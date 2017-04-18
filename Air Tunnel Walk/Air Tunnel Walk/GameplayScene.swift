@@ -10,10 +10,32 @@ import SpriteKit
 
 class GameplayScene:SKScene{
     
+    private var bg1: BGClass?
+    private var bg2: BGClass?
+    private var bg3: BGClass?
+    
+    private var mainCamera: SKCameraNode?
+    
     override func didMove(to view: SKView) {
+        initializeGame();
+    }
+    
+    override func update(_ currentTime: TimeInterval) {
+        manageCamera();
+    }
+    
+    private func initializeGame() {
+        mainCamera = childNode(withName: "MainCamera") as? SKCameraNode!
+        bg1 = childNode(withName: "BG1") as? BGClass!
+        bg2 = childNode(withName: "BG2") as? BGClass!
+        bg3 = childNode(withName: "BG3") as? BGClass!
 
     }
 
+    //Move 10 pixel every frame
+    private func manageCamera() {
+        self.mainCamera?.position.x += 10;
+    }
 
 
 } // class

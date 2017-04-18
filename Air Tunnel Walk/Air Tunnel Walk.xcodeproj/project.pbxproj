@@ -20,6 +20,7 @@
 		007F603B1EA3950200519CA5 /* Player 4.png in Resources */ = {isa = PBXBuildFile; fileRef = 007F60351EA3950200519CA5 /* Player 4.png */; };
 		007F603C1EA3950200519CA5 /* Player 5.png in Resources */ = {isa = PBXBuildFile; fileRef = 007F60361EA3950200519CA5 /* Player 5.png */; };
 		007F603D1EA3950200519CA5 /* Player 6.png in Resources */ = {isa = PBXBuildFile; fileRef = 007F60371EA3950200519CA5 /* Player 6.png */; };
+		1872BE2D1EA6612A000EB954 /* BGClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1872BE2C1EA6612A000EB954 /* BGClass.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		007F60351EA3950200519CA5 /* Player 4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Player 4.png"; sourceTree = "<group>"; };
 		007F60361EA3950200519CA5 /* Player 5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Player 5.png"; sourceTree = "<group>"; };
 		007F60371EA3950200519CA5 /* Player 6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Player 6.png"; sourceTree = "<group>"; };
+		1872BE2C1EA6612A000EB954 /* BGClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BGClass.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,7 +96,8 @@
 		002A7E631E880DF800E49385 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				002A7E651E880EDB00E49385 /* GameplayScene.swift */,
+				1872BE2B1EA660F2000EB954 /* BG And Ground Classes */,
+				1872BE2A1EA660DD000EB954 /* Scene Classes */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -110,6 +113,22 @@
 				007F60371EA3950200519CA5 /* Player 6.png */,
 			);
 			name = Player;
+			sourceTree = "<group>";
+		};
+		1872BE2A1EA660DD000EB954 /* Scene Classes */ = {
+			isa = PBXGroup;
+			children = (
+				002A7E651E880EDB00E49385 /* GameplayScene.swift */,
+			);
+			name = "Scene Classes";
+			sourceTree = "<group>";
+		};
+		1872BE2B1EA660F2000EB954 /* BG And Ground Classes */ = {
+			isa = PBXGroup;
+			children = (
+				1872BE2C1EA6612A000EB954 /* BGClass.swift */,
+			);
+			name = "BG And Ground Classes";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,7 +163,6 @@
 				TargetAttributes = {
 					002A7E431E88072A00E49385 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = V4YCV5BVUP;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -195,6 +213,7 @@
 				002A7E501E88072B00E49385 /* GameViewController.swift in Sources */,
 				002A7E661E880EDB00E49385 /* GameplayScene.swift in Sources */,
 				002A7E481E88072B00E49385 /* AppDelegate.swift in Sources */,
+				1872BE2D1EA6612A000EB954 /* BGClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,7 +336,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = V4YCV5BVUP;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Air Tunnel Walk/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.42fun.Air-Tunnel-Walk";
@@ -330,7 +349,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = V4YCV5BVUP;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Air Tunnel Walk/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.42fun.Air-Tunnel-Walk";
