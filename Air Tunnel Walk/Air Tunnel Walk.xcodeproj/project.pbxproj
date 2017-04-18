@@ -14,6 +14,12 @@
 		002A7E551E88072B00E49385 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 002A7E541E88072B00E49385 /* Assets.xcassets */; };
 		002A7E581E88072B00E49385 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 002A7E561E88072B00E49385 /* LaunchScreen.storyboard */; };
 		002A7E661E880EDB00E49385 /* GameplayScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002A7E651E880EDB00E49385 /* GameplayScene.swift */; };
+		007F60381EA3950200519CA5 /* Player 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 007F60321EA3950200519CA5 /* Player 1.png */; };
+		007F60391EA3950200519CA5 /* Player 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 007F60331EA3950200519CA5 /* Player 2.png */; };
+		007F603A1EA3950200519CA5 /* Player 3.png in Resources */ = {isa = PBXBuildFile; fileRef = 007F60341EA3950200519CA5 /* Player 3.png */; };
+		007F603B1EA3950200519CA5 /* Player 4.png in Resources */ = {isa = PBXBuildFile; fileRef = 007F60351EA3950200519CA5 /* Player 4.png */; };
+		007F603C1EA3950200519CA5 /* Player 5.png in Resources */ = {isa = PBXBuildFile; fileRef = 007F60361EA3950200519CA5 /* Player 5.png */; };
+		007F603D1EA3950200519CA5 /* Player 6.png in Resources */ = {isa = PBXBuildFile; fileRef = 007F60371EA3950200519CA5 /* Player 6.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +32,12 @@
 		002A7E571E88072B00E49385 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		002A7E591E88072B00E49385 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		002A7E651E880EDB00E49385 /* GameplayScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameplayScene.swift; sourceTree = "<group>"; };
+		007F60321EA3950200519CA5 /* Player 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Player 1.png"; sourceTree = "<group>"; };
+		007F60331EA3950200519CA5 /* Player 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Player 2.png"; sourceTree = "<group>"; };
+		007F60341EA3950200519CA5 /* Player 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Player 3.png"; sourceTree = "<group>"; };
+		007F60351EA3950200519CA5 /* Player 4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Player 4.png"; sourceTree = "<group>"; };
+		007F60361EA3950200519CA5 /* Player 5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Player 5.png"; sourceTree = "<group>"; };
+		007F60371EA3950200519CA5 /* Player 6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Player 6.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,9 +70,9 @@
 		002A7E461E88072B00E49385 /* Air Tunnel Walk */ = {
 			isa = PBXGroup;
 			children = (
+				007F60311EA394F000519CA5 /* Player */,
 				002A7E631E880DF800E49385 /* Classes */,
 				002A7E601E880CA900E49385 /* Scenes */,
-				002A7E5F1E880BDB00E49385 /* Player */,
 				002A7E471E88072B00E49385 /* AppDelegate.swift */,
 				002A7E4F1E88072B00E49385 /* GameViewController.swift */,
 				002A7E511E88072B00E49385 /* Main.storyboard */,
@@ -69,14 +81,6 @@
 				002A7E591E88072B00E49385 /* Info.plist */,
 			);
 			path = "Air Tunnel Walk";
-			sourceTree = "<group>";
-		};
-		002A7E5F1E880BDB00E49385 /* Player */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Player;
-			path = ..;
 			sourceTree = "<group>";
 		};
 		002A7E601E880CA900E49385 /* Scenes */ = {
@@ -93,6 +97,19 @@
 				002A7E651E880EDB00E49385 /* GameplayScene.swift */,
 			);
 			name = Classes;
+			sourceTree = "<group>";
+		};
+		007F60311EA394F000519CA5 /* Player */ = {
+			isa = PBXGroup;
+			children = (
+				007F60321EA3950200519CA5 /* Player 1.png */,
+				007F60331EA3950200519CA5 /* Player 2.png */,
+				007F60341EA3950200519CA5 /* Player 3.png */,
+				007F60351EA3950200519CA5 /* Player 4.png */,
+				007F60361EA3950200519CA5 /* Player 5.png */,
+				007F60371EA3950200519CA5 /* Player 6.png */,
+			);
+			name = Player;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -155,10 +172,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				007F603B1EA3950200519CA5 /* Player 4.png in Resources */,
 				002A7E531E88072B00E49385 /* Main.storyboard in Resources */,
+				007F603D1EA3950200519CA5 /* Player 6.png in Resources */,
 				002A7E551E88072B00E49385 /* Assets.xcassets in Resources */,
+				007F60391EA3950200519CA5 /* Player 2.png in Resources */,
+				007F60381EA3950200519CA5 /* Player 1.png in Resources */,
 				000398AF1E88309300F2BF76 /* GameplayScene.sks in Resources */,
+				007F603A1EA3950200519CA5 /* Player 3.png in Resources */,
 				002A7E581E88072B00E49385 /* LaunchScreen.storyboard in Resources */,
+				007F603C1EA3950200519CA5 /* Player 5.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
