@@ -22,6 +22,7 @@ class GameplayScene:SKScene{
     
     override func update(_ currentTime: TimeInterval) {
         manageCamera();
+        manageBGsAndGrounds();
     }
     
     private func initializeGame() {
@@ -35,6 +36,13 @@ class GameplayScene:SKScene{
     //Move 10 pixel every frame
     private func manageCamera() {
         self.mainCamera?.position.x += 10;
+    }
+    
+    private func manageBGsAndGrounds() {
+        bg1?.moveBG(camera: mainCamera!)
+        bg2?.moveBG(camera: mainCamera!)
+        bg3?.moveBG(camera: mainCamera!)
+
     }
 
 
