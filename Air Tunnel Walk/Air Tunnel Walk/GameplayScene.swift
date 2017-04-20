@@ -22,6 +22,8 @@ class GameplayScene:SKScene{
     private var floor2: GroundClass?;
     private var floor3: GroundClass?;
     
+    private var player: Player?
+    
     private var mainCamera: SKCameraNode?
     
     override func didMove(to view: SKView) {
@@ -43,9 +45,20 @@ class GameplayScene:SKScene{
         ground2 = childNode(withName: "Ground2") as? GroundClass!;
         ground3 = childNode(withName: "Ground3") as? GroundClass!;
         
+        ground1?.initializeGroundAndFloor()
+        ground2?.initializeGroundAndFloor()
+        ground3?.initializeGroundAndFloor()
+        
         floor1 = childNode(withName: "Floor1") as? GroundClass!;
         floor2 = childNode(withName: "Floor2") as? GroundClass!;
         floor3 = childNode(withName: "Floor3") as? GroundClass!;
+        
+        floor1?.initializeGroundAndFloor()
+        floor2?.initializeGroundAndFloor()
+        floor3?.initializeGroundAndFloor()
+        
+        player = childNode(withName: "Player") as? Player!;
+        player?.initializePlayer();
 
     }
 
@@ -66,6 +79,8 @@ class GameplayScene:SKScene{
         floor1?.moveGroundsOrFloors(camera: mainCamera!);
         floor2?.moveGroundsOrFloors(camera: mainCamera!);
         floor3?.moveGroundsOrFloors(camera: mainCamera!);
+        
+
 
     }
 

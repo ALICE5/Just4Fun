@@ -22,6 +22,7 @@
 		007F603C1EA3950200519CA5 /* Player 5.png in Resources */ = {isa = PBXBuildFile; fileRef = 007F60361EA3950200519CA5 /* Player 5.png */; };
 		007F603D1EA3950200519CA5 /* Player 6.png in Resources */ = {isa = PBXBuildFile; fileRef = 007F60371EA3950200519CA5 /* Player 6.png */; };
 		1872BE2D1EA6612A000EB954 /* BGClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1872BE2C1EA6612A000EB954 /* BGClass.swift */; };
+		18FD4A511EA8E5AA00D3DC93 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FD4A501EA8E5AA00D3DC93 /* Player.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		007F60361EA3950200519CA5 /* Player 5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Player 5.png"; sourceTree = "<group>"; };
 		007F60371EA3950200519CA5 /* Player 6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Player 6.png"; sourceTree = "<group>"; };
 		1872BE2C1EA6612A000EB954 /* BGClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BGClass.swift; sourceTree = "<group>"; };
+		18FD4A501EA8E5AA00D3DC93 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 		002A7E631E880DF800E49385 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				18FD4A4D1EA8E57100D3DC93 /* Player Class */,
 				1872BE2B1EA660F2000EB954 /* BG And Ground Classes */,
 				1872BE2A1EA660DD000EB954 /* Scene Classes */,
 			);
@@ -132,6 +135,14 @@
 				0018551A1EA7A04000FA980F /* GroundClass.swift */,
 			);
 			name = "BG And Ground Classes";
+			sourceTree = "<group>";
+		};
+		18FD4A4D1EA8E57100D3DC93 /* Player Class */ = {
+			isa = PBXGroup;
+			children = (
+				18FD4A501EA8E5AA00D3DC93 /* Player.swift */,
+			);
+			name = "Player Class";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -217,6 +228,7 @@
 				002A7E661E880EDB00E49385 /* GameplayScene.swift in Sources */,
 				002A7E481E88072B00E49385 /* AppDelegate.swift in Sources */,
 				0018551B1EA7A04000FA980F /* GroundClass.swift in Sources */,
+				18FD4A511EA8E5AA00D3DC93 /* Player.swift in Sources */,
 				1872BE2D1EA6612A000EB954 /* BGClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
