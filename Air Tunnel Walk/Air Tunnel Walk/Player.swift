@@ -40,4 +40,18 @@ class Player: SKSpriteNode {
         physicsBody?.contactTestBitMask = ColliderType.ROCKET_AND_COLLECTABLES
     }
     
+    func move(){
+        self.position.x+=10;
+
+    }
+    
+    func reversePlayer(){
+        self.yScale *= -1;
+    }
+    
+    
+    
+    
+    
+    
 } // class

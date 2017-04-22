@@ -33,6 +33,10 @@ class GameplayScene:SKScene{
     override func update(_ currentTime: TimeInterval) {
         manageCamera();
         manageBGsAndGrounds();
+        player?.move();
+    }
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        reverseGravity();
     }
     
     private func initializeGame() {
@@ -67,6 +71,8 @@ class GameplayScene:SKScene{
         self.mainCamera?.position.x += 10;
     }
     
+    
+    
     private func manageBGsAndGrounds() {
         bg1?.moveBG(camera: mainCamera!)
         bg2?.moveBG(camera: mainCamera!)
@@ -82,6 +88,12 @@ class GameplayScene:SKScene{
         
 
 
+    }
+    
+    private func reverseGravity(){
+        physicsWorld.gravity.dy *= -1;
+        // -9.8 * -1 =9.8   9.8 * -1 = -9.8
+        player?.reversePlayer();
     }
 
 
