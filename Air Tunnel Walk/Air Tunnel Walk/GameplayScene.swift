@@ -26,6 +26,8 @@ class GameplayScene:SKScene{
     
     private var mainCamera: SKCameraNode?
     
+    private var itemController = ItemController()
+    
     override func didMove(to view: SKView) {
         initializeGame();
     }
@@ -63,6 +65,8 @@ class GameplayScene:SKScene{
         
         player = childNode(withName: "Player") as? Player!;
         player?.initializePlayer();
+        
+        Timer.scheduledTimer(timeInterval: TimeInterval(itemController.randomBetweenNumbers(firstNum: 2, secondNum: 4)), target: self, selector: #selector(GameplayScene.spawnItems), userInfo: nil, repeats: true)
 
     }
 
@@ -96,6 +100,9 @@ class GameplayScene:SKScene{
         player?.reversePlayer();
     }
 
+    func spawnItems() {
+        self.scene?.addChild(itemController.spawnItems(camera: mainCamera!))
+    }
 
 } // class
 
