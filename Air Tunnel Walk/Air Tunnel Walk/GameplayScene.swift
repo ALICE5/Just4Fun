@@ -38,6 +38,7 @@ class GameplayScene:SKScene, SKPhysicsContactDelegate{
         manageCamera();
         manageBGsAndGrounds();
         player?.move();
+        moveRocket()
     }
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         reverseGravity();
@@ -63,7 +64,13 @@ class GameplayScene:SKScene, SKPhysicsContactDelegate{
         }
         
         if firstBody.node?.name=="Player" && secondBody.node?.name=="Rocket"{
-        
+            firstBody.node?.removeFromParent()
+            secondBody.node?.removeFromParent()
+            
+            // 2 seconds after player died then call the restart game
+            Timer.scheduledTimer(timeInterval: TimeInterval(2), target: self, selector: #selector(GameplayScene.restartGame), userInfo: nil, repeats: false)
+
+            
         }
     }
     
@@ -98,7 +105,8 @@ class GameplayScene:SKScene, SKPhysicsContactDelegate{
         scoreLabel?.text = "0"
         
         Timer.scheduledTimer(timeInterval: TimeInterval(itemController.randomBetweenNumbers(firstNum: 2, secondNum: 4)), target: self, selector: #selector(GameplayScene.spawnItems), userInfo: nil, repeats: true)
-
+        
+        Timer.scheduledTimer(timeInterval: TimeInterval(7), target: self, selector: #selector(GameplayScene.removeItems), userInfo: nil, repeats: true)
     }
 
     //Move 10 pixel every frame
@@ -133,6 +141,34 @@ class GameplayScene:SKScene, SKPhysicsContactDelegate{
 
     func spawnItems() {
         self.scene?.addChild(itemController.spawnItems(camera: mainCamera!))
+    }
+    
+    func restartGame() {
+        if let scene = GameplayScene(fileNamed: "GameplayScene") {
+            // Set the scale mode to scale to fit the window
+            scene.scaleMode = .aspectFill
+            
+            // Present the scene
+            view!.presentScene(scene, transition:SKTransition.doorsOpenVertical(withDuration: TimeInterval(1)))
+//            view!.presentScene(scene, transition:SKTransition.flipVertical(withDuration: TimeInterval(1)))
+        }
+    }
+    
+    private func moveRocket() {
+        enumerateChildNodes(withName: "Rocket", using: ({
+            (node, error) in
+            node.position.x -= 5
+        }))
+    }
+    
+    func removeItems() {
+        for child in children {
+            if child.name == "Coin" || child.name == "Rocket" {
+                if child.position.x < self.mainCamera!.position.x - self.scene!.frame.width/2 {
+                    child.removeFromParent()
+                }
+            }
+        }
     }
 
 } // class
