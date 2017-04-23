@@ -8,7 +8,7 @@
 
 import SpriteKit
 
-class GameplayScene:SKScene{
+class GameplayScene:SKScene, SKPhysicsContactDelegate{
     
     private var bg1: BGClass?
     private var bg2: BGClass?
@@ -25,6 +25,8 @@ class GameplayScene:SKScene{
     private var player: Player?
     
     private var mainCamera: SKCameraNode?
+    private var scoreLabel:SKLabelNode?
+    private var score = 0;
     
     private var itemController = ItemController()
     
@@ -41,7 +43,33 @@ class GameplayScene:SKScene{
         reverseGravity();
     }
     
+    func didBegin(_ contact: SKPhysicsContact) {
+        var firstBody = SKPhysicsBody();
+        var secondBody = SKPhysicsBody();
+        
+        if contact.bodyA.node?.name=="Player"{
+            firstBody=contact.bodyA;
+            secondBody=contact.bodyB;
+        }else{
+            firstBody=contact.bodyB;
+            secondBody=contact.bodyA;
+        }
+        
+        if firstBody.node?.name=="Player" && secondBody.node?.name=="Coin"{
+            score += 1;
+            scoreLabel?.text=String(score);
+            secondBody.node?.removeFromParent();
+        
+        }
+        
+        if firstBody.node?.name=="Player" && secondBody.node?.name=="Rocket"{
+        
+        }
+    }
+    
     private func initializeGame() {
+        
+        physicsWorld.contactDelegate = self;
         mainCamera = childNode(withName: "MainCamera") as? SKCameraNode!
         bg1 = childNode(withName: "BG1") as? BGClass!;
         bg2 = childNode(withName: "BG2") as? BGClass!;
@@ -65,6 +93,9 @@ class GameplayScene:SKScene{
         
         player = childNode(withName: "Player") as? Player!;
         player?.initializePlayer();
+        
+        scoreLabel = mainCamera!.childNode(withName: "ScoreLabel") as? SKLabelNode!;
+        scoreLabel?.text = "0"
         
         Timer.scheduledTimer(timeInterval: TimeInterval(itemController.randomBetweenNumbers(firstNum: 2, secondNum: 4)), target: self, selector: #selector(GameplayScene.spawnItems), userInfo: nil, repeats: true)
 
