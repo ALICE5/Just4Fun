@@ -36,6 +36,6 @@
 ![GitHub set up](http://7xqb68.com1.z0.glb.clouddn.com/Air%20tunnel%20walk.jpg)
 
 ## 8 Game Matrix
-![GitHub set up](http://7xqb68.com1.z0.glb.clouddn.com/Game%20Matrix.png)
+![GitHub set up](http://7xqb68.com1.z0.glb.clouddn.com/Game%20Matrix.jpg)
 
 
