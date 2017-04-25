@@ -188,6 +188,7 @@
 				TargetAttributes = {
 					002A7E431E88072A00E49385 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = V4YCV5BVUP;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -364,7 +365,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = V4YCV5BVUP;
 				INFOPLIST_FILE = "Air Tunnel Walk/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.42fun.Air-Tunnel-Walk";
@@ -377,7 +378,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = V4YCV5BVUP;
 				INFOPLIST_FILE = "Air Tunnel Walk/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.42fun.Air-Tunnel-Walk";

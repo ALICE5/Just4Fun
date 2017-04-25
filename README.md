@@ -23,10 +23,10 @@
 2. According to the requirement of the background to draw the player’s visualization. 
 3. Set up the taping control. 
 4. Set up the bonus & the monster & obstacle.
-5. The difficulty of the game will increase according to the time of the game surviving player. 
+5. The difficulty of the game will increase according to the score of the game surviving player. 
 
 ## 5 Vision & Scene
-* The scene of our game is in the tunnel, with frame of 2D. All vision style is so relaxing and interesting that it can satisfy the players to kill time and play for fun. In addition, there are some bright background music to make the game more cheerful.
+* The scene of our game is in the tunnel, with frame of 2D. All vision style is so relaxing and interesting that it can satisfy the players to kill time and play for fun. 
   The players can view the game interface by the third-person perspective in screen of mobile phone. The main view of our game is walking sideways, players could see the position of game role, obstacles and bonus in the foregoing tunnel. 
 
 ## 6 Innovation
@@ -34,4 +34,8 @@
 
 ## 7 Prototype
 ![GitHub set up](http://7xqb68.com1.z0.glb.clouddn.com/Air%20tunnel%20walk.jpg)
+
+## 8 Game Matrix
+![GitHub set up](http://7xqb68.com1.z0.glb.clouddn.com/Game%20Matrix.png)
+
 

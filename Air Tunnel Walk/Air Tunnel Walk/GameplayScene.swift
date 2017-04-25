@@ -37,9 +37,19 @@ class GameplayScene:SKScene, SKPhysicsContactDelegate{
     override func update(_ currentTime: TimeInterval) {
         manageCamera();
         manageBGsAndGrounds();
-        player?.move();
+        
+        if score <= 5 {
+            player?.move();
+        } else if score <= 10 {
+            player?.position.x += 10
+        } else {
+            player?.position.x += 13
+        }
+        
         moveRocket()
     }
+    
+    //Click the screen
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         reverseGravity();
     }
@@ -69,9 +79,8 @@ class GameplayScene:SKScene, SKPhysicsContactDelegate{
             
             // 2 seconds after player died then call the restart game
             Timer.scheduledTimer(timeInterval: TimeInterval(2), target: self, selector: #selector(GameplayScene.restartGame), userInfo: nil, repeats: false)
-
-            
         }
+        
     }
     
     private func initializeGame() {
@@ -104,14 +113,21 @@ class GameplayScene:SKScene, SKPhysicsContactDelegate{
         scoreLabel = mainCamera!.childNode(withName: "ScoreLabel") as? SKLabelNode!;
         scoreLabel?.text = "0"
         
-        Timer.scheduledTimer(timeInterval: TimeInterval(itemController.randomBetweenNumbers(firstNum: 2, secondNum: 4)), target: self, selector: #selector(GameplayScene.spawnItems), userInfo: nil, repeats: true)
-        
+        Timer.scheduledTimer(timeInterval: TimeInterval(itemController.randomBetweenNumbers(firstNum: 1, secondNum: 2)), target: self, selector: #selector(GameplayScene.spawnItems), userInfo: nil, repeats: true)
+
         Timer.scheduledTimer(timeInterval: TimeInterval(7), target: self, selector: #selector(GameplayScene.removeItems), userInfo: nil, repeats: true)
     }
 
     //Move 10 pixel every frame
     private func manageCamera() {
-        self.mainCamera?.position.x += 10;
+//        self.mainCamera?.position.x += 10;
+        if score <= 5 {
+            self.mainCamera?.position.x += 8;
+        } else if score <= 10 {
+            self.mainCamera?.position.x += 10;
+        } else {
+            self.mainCamera?.position.x += 13;
+        }
     }
     
     
@@ -134,6 +150,7 @@ class GameplayScene:SKScene, SKPhysicsContactDelegate{
     }
     
     private func reverseGravity(){
+        // direction Y
         physicsWorld.gravity.dy *= -1;
         // -9.8 * -1 =9.8   9.8 * -1 = -9.8
         player?.reversePlayer();

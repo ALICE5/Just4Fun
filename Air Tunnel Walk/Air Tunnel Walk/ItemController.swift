@@ -18,7 +18,7 @@ class ItemController {
         if Int(randomBetweenNumbers(firstNum: 0, secondNum: 10)) >= 6 {
             item = SKSpriteNode(imageNamed: "Rocket")
             item?.name = "Rocket"
-            item?.setScale(0.7)
+            item?.setScale(0.5)
             item?.physicsBody = SKPhysicsBody(rectangleOf: item!.size)
         } else {
             item = SKSpriteNode(imageNamed: "Coin")
