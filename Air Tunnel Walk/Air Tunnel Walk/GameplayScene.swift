@@ -131,7 +131,6 @@ class GameplayScene:SKScene, SKPhysicsContactDelegate{
     }
     
     
-    
     private func manageBGsAndGrounds() {
         bg1?.moveBG(camera: mainCamera!)
         bg2?.moveBG(camera: mainCamera!)
@@ -189,26 +188,6 @@ class GameplayScene:SKScene, SKPhysicsContactDelegate{
     }
 
 } // class
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

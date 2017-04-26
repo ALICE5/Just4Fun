@@ -38,4 +38,7 @@
 ## 8 Game Matrix
 ![GitHub set up](http://7xqb68.com1.z0.glb.clouddn.com/Game%20Matrix.jpg)
 
+## 9 Player Animation
+![GitHub set up](http://7xqb68.com1.z0.glb.clouddn.com/1.jpg)
+
 
