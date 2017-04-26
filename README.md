@@ -9,7 +9,7 @@
 2. Players control the walking track of game role through clicking on the mobile screen.
 3. There are many kind of rockets and the other obstacle, those things will show up according to the random probability. The game role will die if they hit the rockets & obstacle.
 4. The gold coin will show up through the walking process of the game role. If they hit the coin, then will get the bonus.
-5. The difficult of the game will increase through the time goes by.
+5. The difficult of the game will increase through the scores become higher.
 
 ## 3 Major Features
 1. Player can control the "Air walker" clicking their iPhone screen.
